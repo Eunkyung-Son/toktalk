@@ -1,5 +1,5 @@
 export const MY_IMAGES = {
-  RULETTE: require('@assets/images/Rulette.png'),
+  ROULETTE: require('@assets/images/Roulette.png'),
   CAT: require('@assets/images/cat.png'),
   CHECKED: require('@assets/images/checked.png'),
   LOGIN: {
@@ -16,6 +16,7 @@ export const MY_IMAGES = {
   PROFILE: require('@assets/images/profile.png'),
   RABBIT: require('@assets/images/rabbit.png'),
   RIGHT_ARROW: require('@assets/images/right-arrow.png'),
+  ROULETEE_ARROW: require('@assets/images/rouleteeArrow.png'),
   RULETTE_BOTTOM: require('@assets/images/ruletteBottom.png'),
   SCHEDULE: require('@assets/images/schedule.png'),
   SIGNUP: {

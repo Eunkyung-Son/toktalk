@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, Center, HStack, Modal, Text, View } from 'native-base';
+import { Button, Center, HStack, Modal, Text } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
 
 interface ModalLayoutProps {
@@ -17,7 +17,7 @@ interface ModalLayoutProps {
   okBtnText?: string;
 }
 
-function ModalLayout({
+function RouletteModalLayout({
   isOpen,
   onClose,
   isCloseBtn,
@@ -41,58 +41,36 @@ function ModalLayout({
         {isCloseBtn && <Modal.CloseButton />}
         <Modal.Body mt="20px">
           <Center>
-            <View flexDirection="column" alignItems="center">
-              <Text
-                fontSize="lg"
-                lineHeight="lg"
-                fontWeight="extrabold"
-                color="#7B61FF"
-              >
-                {title}
-              </Text>
-
-              <Text
-                mt="10px"
-                fontSize="lg"
-                lineHeight="lg"
-                fontWeight="extrabold"
-                color="#7B61FF"
-              >
-                {subTitleBold}
-              </Text>
-
-              <Text color="gray.700" fontSize="14px">
-                {subTitle}
-              </Text>
-
-              <Text
-                fontSize="md"
-                lineHeight="md"
-                fontWeight="400"
-                color="#1A1A1A"
-              >
-                {nextLineSubTitle}
-              </Text>
-            </View>
+            <Text
+              fontSize="lg"
+              lineHeight="lg"
+              fontWeight="extrabold"
+              color="#7B61FF"
+            >
+              {title}
+            </Text>
+            <Text
+              mt="10px"
+              fontSize="md"
+              lineHeight="md"
+              fontWeight="400"
+              color="#757983"
+            >
+              <Text>{subTitleBold}</Text>
+              {subTitle}
+            </Text>
+            <Text
+              fontSize="md"
+              lineHeight="md"
+              fontWeight="400"
+              color="#1A1A1A"
+            >
+              {nextLineSubTitle}
+            </Text>
           </Center>
         </Modal.Body>
         <Center mt="10px">
           <HStack flexDir="row" w="100%" space="10px" bgColor="#7B61FF">
-            <Button
-              _text={{
-                fontSize: 'md',
-                lineHeight: 'md',
-                color: '#000000',
-              }}
-              borderRadius="0"
-              colorScheme="blueGray"
-              h="50px"
-              w="50%"
-              bgColor="gray.300"
-              onPress={onPress}
-            >
-              취소
-            </Button>
             <Button
               _text={{
                 fontSize: 'md',
@@ -102,11 +80,11 @@ function ModalLayout({
               }}
               colorScheme="blueGray"
               h="50px"
-              w="44%"
+              w="100%"
               //   bgColor="gray.300"
               onPress={onPress}
             >
-              확인
+              {closeBtnText}
             </Button>
           </HStack>
         </Center>
@@ -115,4 +93,4 @@ function ModalLayout({
   );
 }
 
-export default ModalLayout;
+export default RouletteModalLayout;
