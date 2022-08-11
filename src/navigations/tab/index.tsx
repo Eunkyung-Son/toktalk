@@ -12,8 +12,20 @@ export default function HomeTabs() {
       screenOptions={{ headerShown: false }}
       initialRouteName="HomeTab"
     >
-      <Tab.Screen name="HomeTab" component={HomeScreen} />
-      <Tab.Screen name="CountTab" component={CountScreen} />
+      <Tab.Screen
+        name="HomeTab"
+        component={HomeScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="CountTab"
+        component={CountScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
     </Tab.Navigator>
   );
 }

@@ -26,7 +26,13 @@ export default function Navigations() {
           name="AuthStackNavigation"
           component={AuthStackNavigation}
         />
-        <Root.Screen name="HomeTabs" component={HomeTabs} />
+        <Root.Screen
+          name="HomeTabs"
+          component={HomeTabs}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Root.Navigator>
     </NavigationContainer>
   );

@@ -3,9 +3,9 @@ import { Box, Button, Center, Flex, Image, Text, View } from 'native-base';
 import { MY_IMAGES } from '@generated/images/images';
 import { ImageBackground } from 'react-native';
 
-const StartLoginSignupScreen = ({ navigation }: ScreenType) => {
+const StartLoginSignupScreen = ({ navigation }: any) => {
   const handleLogin = () => {
-    navigation.navigate('Login');
+    navigation.navigate('HomeTabs');
     //
   };
 

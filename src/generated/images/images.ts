@@ -1,5 +1,6 @@
 export const MY_IMAGES = {
   CAT: require('@assets/images/cat.png'),
+  CHECKED: require('@assets/images/checked.png'),
   LOGIN: {
     CHECK_ICON: require('@assets/images/login/check-icon.png'),
     CLOSE_EYE_ICON: require('@assets/images/login/close-eye-icon.png'),
@@ -7,6 +8,7 @@ export const MY_IMAGES = {
     LEFT_ARROW_ICON: require('@assets/images/login/left-arrow-icon.png'),
     LOGIN_THUMB: require('@assets/images/login/login-thumb.png'),
   },
+  MAP: require('@assets/images/map.png'),
   MUNGMUNG: require('@assets/images/mungmung.png'),
   RABBIT: require('@assets/images/rabbit.png'),
   SIGNUP: {
@@ -14,5 +16,6 @@ export const MY_IMAGES = {
     EMPLOYEE: require('@assets/images/signup/employee.png'),
   },
   TIGER: require('@assets/images/tiger.png'),
+  UNCHECKED: require('@assets/images/unchecked.png'),
   X_ICON: require('@assets/images/x-icon.png'),
 };

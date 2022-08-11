@@ -14,7 +14,7 @@ interface LoginNavigationProps {
   navigation: any;
 }
 
-const LoginFormContent = ({ navigation }: LoginNavigationProps) => {
+const LoginFormContent = ({ navigation }: any) => {
   const formData = useLoginFormSchema();
   const { handleSubmit, setError } = formData;
 
