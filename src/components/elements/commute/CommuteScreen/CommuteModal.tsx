@@ -6,16 +6,26 @@ import { signupSliceAction } from '@features/Signup/signupSlice';
 
 import ModalLayout from '@components/common/@Layout/ModalLayout';
 
-import { CommonActions } from '@react-navigation/core';
+import { CommonActions, useNavigation } from '@react-navigation/core';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useAppStore } from '@features/useAppStore';
 
-function CommuteModal({ navigation }: any) {
+function CommuteModal() {
+  const navigation = useNavigation<any>();
   const dispatch = useDispatch();
   const isOpenModal = useAppStore((store) => store.MODAL.isOpenModal);
 
   const handleClose = () => {
     dispatch(modalSliceAction.toggleModal(''));
+    navigation.navigate('CommuteTab', {
+      screen: 'Roulette',
+    });
+    // navigation.dispatch(
+    //   CommonActions.reset({
+    //     index: 0,
+    //     routes: [{ name: 'Roulette' }],
+    //   }),
+    // );
   };
 
   const handleOk = () => {

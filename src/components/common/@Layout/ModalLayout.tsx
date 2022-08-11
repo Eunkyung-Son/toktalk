@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Button, Center, HStack, Modal, Text } from 'native-base';
+import { useNavigation } from '@react-navigation/native';
 
 interface ModalLayoutProps {
   isOpen?: boolean;
@@ -29,7 +30,9 @@ function ModalLayout({
   closeBtnText,
   okBtnText,
 }: ModalLayoutProps) {
+  const navigation = useNavigation<any>();
   const onPress = () => {
+    // navigation.navigate('Roulette');
     onClose();
   };
   return (
