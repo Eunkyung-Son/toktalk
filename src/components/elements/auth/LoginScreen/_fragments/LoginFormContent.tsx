@@ -18,7 +18,9 @@ const LoginFormContent = ({ navigation }: LoginNavigationProps) => {
   const formData = useLoginFormSchema();
   const { handleSubmit, setError } = formData;
 
-  const onSubmit = handleSubmit(({ email, password }) => {});
+  const onSubmit = handleSubmit(({ email, password }) => {
+    navigation.navigate('HomeTabs');
+  });
   return <LoginFormContentView formData={formData} onPress={onSubmit} />;
 };
 

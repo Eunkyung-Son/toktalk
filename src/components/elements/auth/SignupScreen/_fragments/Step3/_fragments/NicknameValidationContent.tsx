@@ -27,7 +27,7 @@ function NicknameValidationContent({ navigation }: SignupNavigationProps) {
     console.log(signupFormData);
 
     dispatch(signupSliceAction.setEmailAuthenticated(true));
-    navigation.navigate('Tabs');
+    navigation.navigate('HomeTabs');
   });
 
   return (

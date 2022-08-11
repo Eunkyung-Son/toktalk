@@ -17,8 +17,8 @@ function EmailSendout() {
     const ids = setInterval(() => {
       dispatch(
         signupSliceAction.setSingnupStepInfo({
-          step: 2,
-          range: 66,
+          step: 3,
+          range: 75,
         }),
       );
       dispatch(signupSliceAction.setEmailAuthenticated(true));

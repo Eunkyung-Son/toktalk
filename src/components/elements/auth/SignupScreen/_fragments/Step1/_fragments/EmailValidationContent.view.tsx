@@ -51,7 +51,7 @@ function EmailValidationContentView({
       </FormHelper>
       <BottomBotton
         mt="20px"
-        bgColor={successEmailValidation ? 'primary.500' : 'gray.400'}
+        bgColor={successEmailValidation ? '#7B61FF' : 'gray.400'}
         type="submit"
         disabled={successEmailValidation ? false : true}
         onPress={onPress}

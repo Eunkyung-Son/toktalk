@@ -77,7 +77,7 @@ const StartLoginSignupScreen = ({ navigation }: ScreenType) => {
             lineHeight: '25px',
             fontWeight: 'extrabold',
           }}
-          onPress={handleLogin}
+          onPress={() => navigation.navigate('Signup')}
         >
           회원가입
         </Button>

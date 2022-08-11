@@ -5,6 +5,8 @@ export interface CounterState {
   emailAuthenticated: boolean | null;
   emailVerifierInfo: EmailVerifierInfoType;
   signupFormData: SignupFormDataType;
+  role: RoleType;
+  joinCode: string | number | null;
 }
 
 const initialState: CounterState = {
@@ -24,6 +26,8 @@ const initialState: CounterState = {
     passwordConfirm: null,
     nickname: null,
   },
+  role: null,
+  joinCode: null,
 };
 
 export const signupSlice = createSlice({
@@ -56,18 +60,26 @@ export const signupSlice = createSlice({
         uuid: null,
       };
     },
+    setRole: (state, action: PayloadAction<RoleType>) => {
+      state.role = action.payload;
+    },
+    setJoinCode: (state, action: PayloadAction<string | number | null>) => {
+      state.joinCode = action.payload;
+    },
   },
 });
 
 interface SignupStepInfoType {
-  step: 1 | 2 | 3;
-  range: 33 | 66 | 100;
+  step: 1 | 2 | 3 | 4;
+  range: number;
 }
 
 export interface EmailVerifierInfoType {
   email: string | null;
   uuid: string | null;
 }
+
+export type RoleType = 'Employee' | 'Admin' | null;
 
 export interface SignupFormDataType {
   email?: string | null;

@@ -17,8 +17,8 @@ function EmailValidationContent() {
   const onSubmit = handleSubmit(({ password, passwordConfirm }) => {
     dispatch(
       signupSliceAction.setSingnupStepInfo({
-        step: 3,
-        range: 100,
+        step: 4,
+        range: 75,
       }),
     );
     dispatch(signupSliceAction.setEmailAuthenticated(false));

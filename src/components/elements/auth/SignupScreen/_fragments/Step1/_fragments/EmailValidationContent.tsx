@@ -13,6 +13,12 @@ function EmailValidationContent() {
   const { handleSubmit, setError } = formData;
 
   const onSubmit = handleSubmit(({ email }) => {
+    dispatch(
+      signupSliceAction.setSingnupStepInfo({
+        step: 3,
+        range: 75,
+      }),
+    );
     console.log(`submitted: ${email}`);
   });
 

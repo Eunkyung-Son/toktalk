@@ -127,7 +127,7 @@ const PwdValidationFormContentView = ({
 
       <BottomBotton
         mt="20px"
-        bgColor={successPwdValidation ? 'primary.500' : 'gray.400'}
+        bgColor={successPwdValidation ? '#7B61FF' : 'gray.400'}
         disabled={successPwdValidation ? false : true}
         type="submit"
         onPress={onPress}

@@ -64,7 +64,7 @@ const NicknameValidationFormContentView = ({
 
       <BottomBotton
         mt="20px"
-        bgColor={successNicknameValidaton ? 'primary.500' : 'gray.400'}
+        bgColor={successNicknameValidaton ? '#7B61FF' : 'gray.400'}
         disabled={successNicknameValidaton ? false : true}
         type="submit"
         onPress={onPress}

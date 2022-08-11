@@ -17,6 +17,8 @@ import PwdValidation from './_fragments/Step2/_fragments/PwdValidationContent';
 import NicknameValidationContent from './_fragments/Step3/_fragments/NicknameValidationContent';
 import { useAppStore } from '@features/useAppStore';
 import SelectAuthentication from './_fragments/Step4/_fragments/SelectAuthentication';
+import JoinCodeContentView from './_fragments/Step4/_fragments/JoinCodeContent.view';
+import JoinCodeContent from './_fragments/Step4/_fragments/JoinCodeContent';
 
 interface SignupNavigationProps {
   navigation: StackNavigationProp<any>;
@@ -25,6 +27,7 @@ interface SignupNavigationProps {
 const SignupScreen = ({ navigation }: SignupNavigationProps) => {
   const dispatch = useDispatch();
   const signupStep = useAppStore((store) => store.SIGNUP.signupStepInfo);
+  const role = useAppStore((store) => store.SIGNUP.role);
   const emailAuthenticated = useAppStore(
     (store) => store.SIGNUP.emailAuthenticated,
   );
@@ -35,7 +38,7 @@ const SignupScreen = ({ navigation }: SignupNavigationProps) => {
   };
 
   return (
-    <CommonLayout p="16px">
+    <CommonLayout p="16px" bgColor="#FFFFFF">
       <CommonHeader
         text={'회원가입'}
         isBackButton={step === 1 && emailAuthenticated === null && true}
@@ -49,24 +52,28 @@ const SignupScreen = ({ navigation }: SignupNavigationProps) => {
             value={range}
             bg="gray.300"
             _filledTrack={{
-              bg: 'black',
+              bg: '#7B61FF',
             }}
           />
         </Box>
       </Center>
-      <SelectAuthentication />
       {step === 1 ? (
+        role === null ? (
+          <SelectAuthentication />
+        ) : (
+          <JoinCodeContent />
+        )
+      ) : step === 2 ? (
         emailAuthenticated === null ? (
           <EmailValidationContent />
         ) : (
           <EmailAuthentication />
         )
-      ) : step === 2 ? (
+      ) : step === 3 ? (
         <PwdValidation />
       ) : (
         <NicknameValidationContent navigation={navigation} />
       )}
-      <NicknameValidationContent navigation={navigation} />
 
       {/* <SignupStopModal navigation={navigation} /> */}
     </CommonLayout>
