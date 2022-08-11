@@ -1,6 +1,7 @@
 import counterSlice from '@features/Count/counterSlice';
 
 import { configureStore } from '@reduxjs/toolkit';
+import modalSlice from './Modal/modalSlice';
 import signupSlice from './Signup/signupSlice';
 
 export function makeStore() {
@@ -8,6 +9,7 @@ export function makeStore() {
     reducer: {
       [counterSlice.name]: counterSlice.reducer,
       [signupSlice.name]: signupSlice.reducer,
+      [modalSlice.name]: modalSlice.reducer,
     },
   });
 }
