@@ -10,12 +10,18 @@ export const MY_IMAGES = {
   },
   MAP: require('@assets/images/map.png'),
   MUNGMUNG: require('@assets/images/mungmung.png'),
+  PEN: require('@assets/images/pen.png'),
+  PRESENT: require('@assets/images/present.png'),
+  PROFILE: require('@assets/images/profile.png'),
   RABBIT: require('@assets/images/rabbit.png'),
+  RIGHT_ARROW: require('@assets/images/right-arrow.png'),
+  SCHEDULE: require('@assets/images/schedule.png'),
   SIGNUP: {
     ADMIN: require('@assets/images/signup/admin.png'),
     EMPLOYEE: require('@assets/images/signup/employee.png'),
   },
   TIGER: require('@assets/images/tiger.png'),
+  TIME: require('@assets/images/time.png'),
   UNCHECKED: require('@assets/images/unchecked.png'),
   X_ICON: require('@assets/images/x-icon.png'),
 };
