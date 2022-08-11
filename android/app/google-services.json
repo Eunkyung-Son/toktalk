@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "773704767605",
+    "project_id": "toktokhan-e1422",
+    "storage_bucket": "toktokhan-e1422.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773704767605:android:bc77c519597cd190a1803c",
+        "android_client_info": {
+          "package_name": "com.toktalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773704767605-ekomd984gmocs7rmmoa6mls2pp945hnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOFZspe-FJY-1nXPf4iB2bAFSiIOmdHp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773704767605-ekomd984gmocs7rmmoa6mls2pp945hnm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "773704767605-2ti4v7qekaub7hukl2if874377uomr3l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.toktokhan"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
